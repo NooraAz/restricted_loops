@@ -6,4 +6,7 @@ They are supposed to be an approxiamte model for cyclic peptides.
 So far, out of around 5000 PDB entries, 40 loops have been fround. 
 
 resloops >> PDB files for found restricted loops
+
 find_loops.py >> code for finding loops and dumping them as PDB 
+
+resolu.idx >> list of pdb_ids (provided by David Nannemann - https://ftp.wwpdb.org/pub/pdb/derived_data/index/ )
