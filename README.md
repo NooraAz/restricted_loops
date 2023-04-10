@@ -9,6 +9,7 @@ This database is extracted from RCSB proteins. 3692 resloops were found in total
 *Notice 2: loops sequences are not unique.*
 
 **resloops.zip** : PDB files of restricted loops 
+
                    naming format: PDBid-LoopStartPosition-LoopLength
 
 **find_loops.py** : searching for restricted loops in RCSB and dumping them
