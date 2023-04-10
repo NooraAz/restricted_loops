@@ -1,8 +1,8 @@
 # Restricted Loops
 
-Restricted loops are defined as loops in range of 4-10 residues, whose ends (CA-CA) are closer than 3.9 A.
+Restricted loops are defined as loops in range of 4-40 residues, whose ends (CA-CA) are closer than 3.9 A.
 
-This database is extracted from RCSB proteins. So far, out of almost 5000 PDBs, 59 loops have been found. 
+This database is extracted from RCSB proteins. 3692 resloops were found in total.
 
 *Notice: loops are not screened for their SASA.*
 
