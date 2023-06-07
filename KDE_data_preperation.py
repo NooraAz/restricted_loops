@@ -49,5 +49,22 @@ def get_phi_psi(pose: Pose) -> list:
         
     return torsion_list
   
-  ########## Loading loops ##########
-  df = pd.read_csv('loops-dataset.csv')
+########## Loading loops ##########
+df = pd.read_csv('loops-dataset.csv')
+'''
+I only choose loops with mean-sasa (per residue sasa) >= 20 and
+having less than or equal to 2 hbonds to other parts of the protein.
+'''
+df_chosen = df.loc[(df['mean-sasa'] >= 20) & (df['hbonds'] <= 2)]
+df_chosen.reset_index(inplace=True)
+'''
+I delete repetitive sequences
+'''
+to_del = []
+for i in range(len(df_chosen)):
+    if df_chosen['sequence'][i] in list(df_chosen['sequence'][i+1:]):
+        to_del.append(i)
+        
+df_chosen = df_chosen.drop(to_del)
+df_chosen.reset_index(inplace=True)
+
